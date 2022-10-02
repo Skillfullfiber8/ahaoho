@@ -6,7 +6,7 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="viewport" content="width=700; user-scalable=0;" />
+    <meta name="viewport" content="width=500; user-scalable=0;" />
 
     <title>Aha Oho</title>
 
@@ -50,7 +50,7 @@
         box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2);
       }
 
-      img {
+      .card img {
         border-radius: 5px 5px 5px 5px;
         width: 200px;
         height: 200px;
@@ -68,25 +68,192 @@
           flex-direction: column;
           max-width: 250px;
         }
-        img {
+        .card img {
           width: 250px;
           height: 250px;
         }
       }
+
+      center{
+        width: 100%;
+        min-width: 500px;
+      }
     </style>
   </head>
   <body>
-    <center>
-      <div class="card">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&usqp=CAU"
-          alt="Avatar"
-        />
-        <div class="container">
-          <h4><b>Jane Doe</b></h4>
-          <p>Interior Designer</p>
+    <nav>
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="" /></a>
+
+      <ol class="nav-links">
+        <li><a href="index.html">Home</a></li>
+
+        <li><a href="#">AboutUs</a></li>
+
+        <li><a href="#">Advisors</a></li>
+
+        <li><a href="ambassador-2023.html">2023</a></li>
+      </ol>
+
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">
+          ×
+        </a>
+
+        <a href="#">Home</a>
+
+        <a href="#">AboutUs</a>
+
+        <a href="#">Advisors</a>
+
+        <div class="dropdown">
+          <li onclick="myFunction()" class="dropbtn">Contents</li>
+
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">English</a>
+
+            <a href="#">BE-Maths</a>
+
+            <a href="#">BE-Physics</a>
+
+            <a href="#">BE-Chemistry</a>
+
+            <a href="#">BE-Eng.Graphics</a>
+
+            <a href="#">Computer</a>
+
+            <a href="#">Aptitude</a>
+
+            <a href="#">NEET</a>
+
+            <a href="#">CA</a>
+
+            <a href="#">Class 7</a>
+
+            <a href="#">Class 8</a>
+
+            <a href="#">Class 9</a>
+
+            <a href="#">Class 10</a>
+
+            <a href="#">Class 11</a>
+
+            <a href="#">Class 12</a>
+          </div>
         </div>
       </div>
-    </center>
+
+      <div id="main">
+        <button class="openbtn" onclick="openSidebar()">☰</button>
+      </div>
+    </nav>
+
+    <header>
+      <center>
+        <ul>
+          <!-- <li><a class="active" href="#home">Home</a></li> -->
+
+          <li><a href="#">English</a></li>
+
+          <li><a href="#">BE-Maths</a></li>
+
+          <li><a href="#">BE-Physics</a></li>
+
+          <li><a href="#">BE-Chemistry</a></li>
+
+          <li><a href="#">BE-Eng.Graphics</a></li>
+
+          <li><a href="#">Computer</a></li>
+
+          <li><a href="#">Aptitude</a></li>
+
+          <li><a href="#">NEET</a></li>
+
+          <li><a href="#">CA</a></li>
+
+          <li><a href="#">Class 7</a></li>
+
+          <li><a href="#">Class 8</a></li>
+
+          <li><a href="#">Class 9</a></li>
+
+          <li><a href="#">Class 10</a></li>
+
+          <li><a href="#">Class 11</a></li>
+
+          <li><a href="#">Class 12</a></li>
+        </ul>
+      </center>
+    </header>
+
+        <!-- cards -->
+        <center>
+          <div class="card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&usqp=CAU"
+              alt="Avatar"
+            />
+            <div class="container">
+              <h4><b>Jane Doe</b></h4>
+              <p>Interior Designer</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&usqp=CAU"
+              alt="Avatar"
+            />
+            <div class="container">
+              <h4><b>Jane Doe</b></h4>
+              <p>Interior Designer</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvFBa3G11OUBYADP7ouSBgwiiRzSYorF4dfg&usqp=CAU"
+              alt="Avatar"
+            />
+            <div class="container">
+              <h4><b>Jane Doe</b></h4>
+              <p>Interior Designer</p>
+            </div>
+          </div>
+        </center>
+
+    <footer>
+      <p>© aha oho all rights reserved 2022</p>
+
+      <div class="media_icons">
+        <a class="media-3" href="https://www.youtube.com" target="_blank">
+          <img
+            src="img\social_icons\icons8-youtube.svg"
+            alt="..";
+            width="30";
+            height="30";
+          />
+        </a>
+
+        <a class="media-1" href="https://www.facebook.com" target="_blank">
+          <img
+            src="img\social_icons\icons8-facebook.svg"
+            alt="..";
+            width="30";
+            height="30";
+          />
+        </a>
+
+        <a class="media-2" href="https://www.instagram.com" target="_blank">
+          <img
+            src="img\social_icons\icons8-instagram.svg"
+            alt="..";
+            width="30";
+            height="30";
+          />
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
