@@ -1,408 +1,873 @@
-body{
-  margin: 0%;
-}
-
-.href{
-  font-size: 50px;
-}
-
-.heading{
-  display: flex;
-  justify-content: center;
-}
-
-.logo{
-width: auto;
-height: 70px;
-}
-
-.sidenav{
-  height: 100%;
-  background-color: #D9EEE1;
-}
-
-.burger-menu{
-font-size:30px;
-cursor:pointer;
-display: flex;
-align-items: center;
-margin-left: 10px;
-z-index: 50;
-}
-
-/*SIDEBAR*/
-.sidenav {
-height: 100%!important;
-width: 0;
-position: fixed;
-z-index: 50;
-top: 0;
-left: 0;
-/* background-color: #D9EEE1; */
-overflow-x: hidden;
-transition: 0.5s;
-padding-top: 60px;
-/* margin-top: 8vh; */
-}
-
-.sidenav a {
-padding: 8px 8px 8px 32px;
-text-decoration: none;
-font-size: 25px;
-color: #818181;
-display: block;
-transition: 0.3s;
-}
-
-.navitem{
-  font-size: 15px!important;
-}
-
-.sidenav a:hover {
-  color: green;
-}
-
-.sidenav .closebtn {
-position: absolute;
-top: 0;
-right: 25px;
-font-size: 36px;
-margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-.sidenav {padding-top: 15px;}
-.sidenav a {font-size: 18px;}
-}
-
-/* Drop Down Styles
-================================ */
-nav .drop-down {
-list-style: none; 
-overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
-height: auto; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
-background-color: #D9EEE1;
-font-family: Arial;
-width: 100%;
-margin: 5px auto;
-padding: 0px;
-text-align: center;
--webkit-transition: height 0.3s ease;
-        transition: height 0.3s ease;
-}
-
-nav .drop-down.closed {
-/*  When toggled via jQuery this class will reduce the height of the ul which inconjuction
-    with overflow: hidden set on the ul will hide all list items apart from the first */
-/* current li height 38px + 5px border */
-height: 43px;
-}
-
-nav .drop-down li {
-border-bottom: 5px solid #D9EEE1;
-}
-
-nav .drop-down li a {
-display: block;
-color: #000;
-text-decoration: none;
-padding: 10px; /* Larger touch target area */
-}
-
-nav .drop-down li:first-child a:after {
-content: "\25BC";
-float: right;
-margin-left: -30px; /* Excessive -margin to bring link text back to center */
-margin-right: 5px;
-}
-
-/* .drop-down{
-  margin: 0%!important;
-}  */
-
-.dropdown-btn{
-  display: flex;
-  justify-content: start;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.nav-button, .nav-button1, .nav-button2{
-width: 204px;
-}
-
-.navitem{
-  width: 204px;
-}
-
-/*Navbar*/
-header{
-  position: sticky;
-  top: 70px;
-  z-index: 20;
-}
-
-nav{
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-decoration: none;
-  min-height: 8vh;
-  background-color: #D9EEE1;
-  font-family: 'Poppins', sans-serif;
-  width: 100%;
-  min-width: 500px;
-}
-
-.nav-links{
-  display: flex;
-  justify-content: space-around;
-  letter-spacing: 2px;
-  width: 30%;
-}
-
-.nav-links a{
-  text-decoration: none;
-  color: black;
-}
-
-.nav-links a:hover {
-color: green;
-}
-
-.nav-links li{
-  list-style: none;
-  text-decoration: none;
-}
-
-.burger div{
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  margin: 5px;
-}
-  .burger{
-      display: none;
-      cursor: pointer;
-  }
-
- @media screen and (max-width: 1300px) {
-  .nav-links{
-      width: 50%;
-  }
- }
-
- @media screen and (max-width: 750px) {
-  .logo{
-      height: 50px;
-  }
- }
-
- @media screen and (max-width: 730px) {
-  .nav-links{
-      display: none;
-  }
- }
-
- @media screen and (min-width: 730px) {
-  #main{
-      display: none;
-  }
- }
-
- .sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: #D9EEE1;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-}
-
-.sidebar a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidebar a:hover {
-  color: green;
-}
-
-.sidebar .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-.openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  color: black;
-  background-color: #D9EEE1 ;
-  padding: 10px 15px;
-  border: none;
-}
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-.content-links {
-  font-size: 15px;
-  margin-left: 30px;
-}
-
-/* header-links */
-header{
-position: sticky;
-}
-
-header ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-overflow: hidden;
-background-color: #333;
-}
-
-header ul>li {
-float: left;
-border-right:1px solid #bbb;
-}
-
-header ul>li:last-child {
-border-right: none;
-}
-
-header ul>li a {
-display: block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-}
-
-header ul>li a:hover:not(.active) {
-background-color: #111;
-}
-
-.active {
-background-color: #04AA6D;
-}
-
-@media screen and (max-width: 730px) {
-header{
-    display: none;
-}
-}
-
-/* contents dropdown */
-.dropbtn {
-color: black;
-padding: 16px;
-font-size: 16px;
-border: none;
-cursor: pointer;
-}
-
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-.dropdown-content {
-display: none;
-position: absolute;
-min-width: 200px;
-overflow: auto;
-z-index: 1;
-}
-
-li{
-list-style: none;
-}
-
-.dropdown-content a{
-color: black;
-text-decoration: none;
-display: block;
-list-style: none;
-font-size: 15px;
-}
-
-.show {display: block;}
-
-.dropdown li{
-padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
-}
-
-.dropdown li:hover {
-color: green;
-}
-
-footer{
-  padding-top: 27px;
-  background-color: #D9EEE1;
-  text-align: center;
-  height: 70px;
-  width: 100%;
-}
-
-.media_icons{
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: -23px;
-  float: right;
-  padding-right: 4px;
-  }
-  
-  .media-1{
-     padding-right: 5px;
-  }
-  
-  .media-2{
-    padding-right: 5px;
-  }
-  
-  .media-3{
-    padding-right: 5px;
-  }
-  
-  .media-1:hover,.media-2:hover,.media-3:hover{
-    transform: scale(1.1); 
-  }
-
-  /* menu arrow btn */
-  .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    margin-left: 6px;
-    margin-bottom: 4px;
-  }
-  .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+body{
+
+  margin: 0%;
+
+}
+
+
+
+
+
+.href{
+
+  font-size: 50px;
+
+}
+
+
+
+.heading{
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+
+
+.logo{
+
+width: auto;
+
+height: 70px;
+
+}
+
+
+
+.sidenav{
+
+  height: 100%;
+
+  background-color: #D9EEE1;
+
+}
+
+
+
+.burger-menu{
+
+font-size:30px;
+
+cursor:pointer;
+
+display: flex;
+
+align-items: center;
+
+margin-left: 10px;
+
+z-index: 50;
+
+}
+
+
+
+/*SIDEBAR*/
+
+.sidenav {
+
+height: 100%!important;
+
+width: 0;
+
+position: fixed;
+
+z-index: 50;
+
+top: 55px;
+
+left: 0;
+
+/* background-color: #D9EEE1; */
+
+overflow-x: hidden;
+
+transition: 0.5s;
+
+padding-top: 60px;
+
+ margin-top: 8vh; 
+
+}
+
+
+
+.nav{
+
+    position: sticky;
+
+    top: 17vh;
+
+}
+
+
+
+.sidenav a {
+
+padding: 8px 8px 8px 32px;
+
+text-decoration: none;
+
+font-size: 25px;
+
+color: #818181;
+
+display: block;
+
+transition: 0.3s;
+
+}
+
+
+
+.navitem{
+
+  font-size: 15px!important;
+
+}
+
+
+
+.sidenav a:hover {
+
+  color: green;
+
+}
+
+
+
+.sidenav .closebtn {
+
+position: absolute;
+
+top: 0;
+
+right: 25px;
+
+font-size: 36px;
+
+margin-left: 50px;
+
+z-index: 500;
+
+}
+
+
+
+@media screen and (max-height: 450px) {
+
+.sidenav {padding-top: 15px;}
+
+.sidenav a {font-size: 18px;}
+
+}
+
+
+
+/* Drop Down Styles
+
+================================ */
+
+nav .drop-down {
+
+list-style: none; 
+
+overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
+
+height: auto; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
+
+background-color: #D9EEE1;
+
+font-family: Arial;
+
+width: 100%;
+
+margin: 5px auto;
+
+padding: 0px;
+
+text-align: center;
+
+-webkit-transition: height 0.3s ease;
+
+        transition: height 0.3s ease;
+
+}
+
+
+
+nav .drop-down.closed {
+
+/*  When toggled via jQuery this class will reduce the height of the ul which inconjuction
+
+    with overflow: hidden set on the ul will hide all list items apart from the first */
+
+/* current li height 38px + 5px border */
+
+height: 43px;
+
+}
+
+
+
+nav .drop-down li {
+
+border-bottom: 5px solid #D9EEE1;
+
+}
+
+
+
+nav .drop-down li a {
+
+display: block;
+
+color: #000;
+
+text-decoration: none;
+
+padding: 10px; /* Larger touch target area */
+
+}
+
+
+
+nav .drop-down li:first-child a:after {
+
+content: "\25BC";
+
+float: right;
+
+margin-left: -30px; /* Excessive -margin to bring link text back to center */
+
+margin-right: 5px;
+
+}
+
+
+
+/* .drop-down{
+
+  margin: 0%!important;
+
+}  */
+
+
+
+.dropdown-btn{
+
+  display: flex;
+
+  justify-content: start;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+}
+
+
+
+.nav-button, .nav-button1, .nav-button2{
+
+width: 204px;
+
+}
+
+
+
+.navitem{
+
+  width: 204px;
+
+}
+
+
+
+/*Navbar*/
+
+header{
+
+  position: sticky;
+
+  top: 70px;
+
+  z-index: 20;
+
+}
+
+
+
+nav{
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 20;
+
+  display: flex;
+
+  justify-content: space-around;
+
+  align-items: center;
+
+  text-decoration: none;
+
+  min-height: 8vh;
+
+  background-color: #D9EEE1;
+
+  font-family: 'Poppins', sans-serif;
+
+  width: 100%;
+
+  min-width: 500px;
+
+}
+
+
+
+.nav-links{
+
+  display: flex;
+
+  justify-content: space-around;
+
+  letter-spacing: 2px;
+
+  width: 30%;
+
+}
+
+
+
+.nav-links a{
+
+  text-decoration: none;
+
+  color: black;
+
+}
+
+
+
+.nav-links a:hover {
+
+color: green;
+
+}
+
+
+
+.nav-links li{
+
+  list-style: none;
+
+  text-decoration: none;
+
+}
+
+
+
+.burger div{
+
+  width: 25px;
+
+  height: 3px;
+
+  background-color: black;
+
+  margin: 5px;
+
+}
+
+  .burger{
+
+      display: none;
+
+      cursor: pointer;
+
+  }
+
+
+
+ @media screen and (max-width: 1300px) {
+
+  .nav-links{
+
+      width: 50%;
+
+  }
+
+ }
+
+
+
+ @media screen and (max-width: 750px) {
+
+  .logo{
+
+      height: 50px;
+
+  }
+
+ }
+
+
+
+@media screen and (max-width: 1377px) {
+
+    .sidenav{
+
+      top: 94px;
+
+  }
+
+}
+
+
+
+
+
+ @media screen and (max-width: 730px) {
+
+  .nav-links{
+
+      display: none;
+
+  }
+
+  header{
+
+      top: 56px;
+
+  }
+
+  .nav{
+
+      top: 8vh;
+
+  }
+
+  .sidenav{
+
+      top: 0;
+
+  }
+
+ }
+
+
+
+ @media screen and (min-width: 730px) {
+
+  #main{
+
+      display: none;
+
+  }
+
+ }
+
+
+
+ .sidebar {
+
+  height: 100%;
+
+  width: 0;
+
+  position: fixed;
+
+  z-index: 1;
+
+  top: 0;
+
+  right: 0;
+
+  background-color: #D9EEE1;
+
+  overflow-x: hidden;
+
+  transition: 0.5s;
+
+  padding-top: 60px;
+
+}
+
+
+
+.sidebar a {
+
+  padding: 8px 8px 8px 32px;
+
+  text-decoration: none;
+
+  font-size: 25px;
+
+  color: black;
+
+  display: block;
+
+  transition: 0.3s;
+
+}
+
+
+
+.sidebar a:hover {
+
+  color: green;
+
+}
+
+
+
+.sidebar .closebtn {
+
+  position: absolute;
+
+  top: 10px;
+
+  right: 25px;
+
+  font-size: 36px;
+
+  margin-left: 50px;
+
+}
+
+
+
+.openbtn {
+
+  font-size: 20px;
+
+  cursor: pointer;
+
+  color: black;
+
+  background-color: #D9EEE1 ;
+
+  padding: 10px 15px;
+
+  border: none;
+
+}
+
+
+
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+
+  .sidebar {padding-top: 15px;}
+
+  .sidebar a {font-size: 18px;}
+
+}
+
+
+
+.content-links {
+
+  font-size: 15px;
+
+  margin-left: 30px;
+
+}
+
+
+
+/* header-links */
+
+header{
+
+position: sticky;
+
+}
+
+
+
+header ul {
+
+list-style-type: none;
+
+margin: 0;
+
+padding: 0;
+
+overflow: hidden;
+
+background-color: #333;
+
+}
+
+
+
+header ul>li {
+
+float: left;
+
+border-right:1px solid #bbb;
+
+}
+
+
+
+header ul>li:last-child {
+
+border-right: none;
+
+}
+
+
+
+header ul>li a {
+
+display: block;
+
+color: white;
+
+text-align: center;
+
+padding: 14px 16px;
+
+text-decoration: none;
+
+}
+
+
+
+header ul>li a:hover:not(.active) {
+
+background-color: #111;
+
+}
+
+
+
+.active {
+
+background-color: #04AA6D;
+
+}
+
+
+
+@media screen and (max-width: 730px) {
+
+header{
+
+    display: none;
+
+}
+
+}
+
+/*@media screen and (max-width: 520px) {*/
+
+/*footer{*/
+
+/*    position: absolute;*/
+
+/*    bottom: 0px;*/
+
+/*}*/
+
+
+
+
+
+/* contents dropdown */
+
+.dropbtn {
+
+color: black;
+
+padding: 16px;
+
+font-size: 16px;
+
+border: none;
+
+cursor: pointer;
+
+}
+
+
+
+.dropdown {
+
+position: relative;
+
+display: inline-block;
+
+}
+
+
+
+.dropdown-content {
+
+display: none;
+
+position: absolute;
+
+min-width: 200px;
+
+overflow: auto;
+
+z-index: 1;
+
+}
+
+
+
+nav li{
+
+list-style: none;
+
+}
+
+
+
+.dropdown-content a{
+
+color: black;
+
+text-decoration: none;
+
+display: block;
+
+list-style: none;
+
+font-size: 15px;
+
+}
+
+
+
+.show {display: block;}
+
+
+
+.dropdown li{
+
+padding: 8px 8px 8px 32px;
+
+  text-decoration: none;
+
+  font-size: 25px;
+
+  color: black;
+
+  display: block;
+
+  transition: 0.3s;
+
+}
+
+
+
+.dropdown li:hover {
+
+color: green;
+
+}
+
+
+
+footer{
+
+  padding-top: 7px;
+
+  background-color: #D9EEE1;
+
+  text-align: center;
+
+  height: 60px;
+
+  width: 100%;
+
+}
+
+
+
+.media_icons{
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  margin-top: -40px;
+
+  float: right;
+
+  padding-right: 4px;
+
+  }
+
+  
+
+  .media-1{
+
+     padding-right: 5px;
+
+  }
+
+  
+
+  .media-2{
+
+    padding-right: 5px;
+
+  }
+
+  
+
+  .media-3{
+
+    padding-right: 5px;
+
+  }
+
+  
+
+  .media-1:hover,.media-2:hover,.media-3:hover{
+
+    transform: scale(1.1); 
+
+  }
+
+
+
+  /* menu arrow btn */
+
+  .arrow {
+
+    border: solid black;
+
+    border-width: 0 3px 3px 0;
+
+    display: inline-block;
+
+    padding: 3px;
+
+    margin-left: 6px;
+
+    margin-bottom: 4px;
+
+  }
+
+  .down {
+
+    transform: rotate(45deg);
+
+    -webkit-transform: rotate(45deg);
+
   }
